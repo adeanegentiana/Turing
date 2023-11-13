@@ -1,0 +1,101 @@
+________________________________________________________________________________
+|                                                                              |
+|                               Group: 323CB                                   |
+|                          Last Name: Gentiana Adeane                          |
+|                            First Name: Marcu                                 |
+|______________________________________________________________________________|
+|                                                                              |
+|                                                                              |
+|                                                                              |
+|                                                                              |
+|                         _____                    _____                       |
+|                        /\    \                  /\    \                      |
+|                       /::\    \                /::\    \                     |
+|                      /::::\    \              /::::\    \                    |
+|                     /::::::\    \            /::::::\    \                   |
+|                    /:::/\:::\    \          /:::/\:::\    \                  |
+|                   /:::/__\:::\    \        /:::/__\:::\    \                 |
+|                  /::::\   \:::\    \      /::::\   \:::\    \                |
+|                 /::::::\   \:::\    \    /::::::\   \:::\    \               |
+|                /:::/\:::\   \:::\    \  /:::/\:::\   \:::\    \              |
+|               /:::/  \:::\   \:::\____\/:::/  \:::\   \:::\____\             |
+|               \::/    \:::\  /:::/    /\::/    \:::\  /:::/    /             |
+|                \/____/ \:::\/:::/    /  \/____/ \:::\/:::/    /              |
+|                         \::::::/    /            \::::::/    /               |
+|                          \::::/    /              \::::/    /                |
+|                          /:::/    /               /:::/    /                 |
+|                         /:::/    /               /:::/    /                  |
+|                        /:::/    /               /:::/    /                   |
+|                       /:::/    /               /:::/    /                    |
+|                       \::/    /                \::/    /                     |
+|                        \/____/                  \/____/                      |
+|                                                                              |
+|                                                                              |
+|                                                                              |
+|                                                                              |
+|                                     Tema 1                                   |
+|                                   TAB SIZE: 4                                |
+|______________________________________________________________________________|
+|                                                                              |
+|                                                                              |
+|                                      main                                    |
+|                                                                              |
+|______________________________________________________________________________|
+|                                                                              |
+|   Inputul dat de la stdin l-am pus pe tot intr-o lista din care am eliminat  |
+| toate newlineurile. Am sectionat apoi lista (rand cu rand) si am format      |
+| o lista cu un singur element care contine tipul taskului, lista de inputuri, |
+| iar restul liniilor le-am dat ca parametru functiei readTM descrisa mai jos  |
+| pentru interpretare.                                                         |
+|   In functie de tipul taskului, am apelat functia corespunzatoare si am      |
+| afisat lista care contine outputul sub forma de string.                      |
+|                                                                              |
+|______________________________________________________________________________|
+|                                                                              |
+|                                                                              |
+|                                     readTM                                   |
+|                                                                              |
+|______________________________________________________________________________|
+|                                                                              |
+|   Aceasta functie sectioneaza lista care contine codificarea masinii turing  |
+| si returneaza un dictionar pentru a simplifica accesarea tranzitiilor.       |
+|______________________________________________________________________________|
+|                                                                              |
+|                                                                              |
+|                                      step                                    |
+|                                                                              |
+|______________________________________________________________________________|
+|                                                                              |
+|   Aceasta functie primeste ca parametrii lista de inputuri si codificarea    |
+| masinii turing si pentru fiecare cuvant din lista de inputuri cauta          |
+| tranzitia corespunzatoare. Daca o gaseste, face schimbarile necesare, iar    |
+| daca nu, afiseaza "False".                                                   |
+|______________________________________________________________________________|
+|                                                                              |
+|                                                                              |
+|                                     accept                                   |
+|                                                                              |
+|______________________________________________________________________________|
+|                                                                              |
+|   Parametrii sunt aceiasi ca cei de la step si aceiasi vor fi si la k_accept.|
+| Verific daca lista de stari finale din codificarea masinii turing este goala |
+| si afisez "False" pentru toate cuvintele date ca input.                      |
+|   Daca masina are stari finale, caut pentru fiecare cuvant tranzitia         |
+| aferenta si dupa fiecare pas reiau cautarea in lista de tranzitii, evident,  |
+| pentru cuvantul nou format. La fiecare pas verific daca starea este finala.  |
+|   Daca la un moment dat cursorul iese de pe banda (in afara cuvantului),     |
+| adaug '#'.                                                                   |
+|______________________________________________________________________________|
+|                                                                              |
+|                                                                              |
+|                                    k_accept                                  |
+|                                                                              |
+|______________________________________________________________________________|
+|                                                                              |
+|   Aici am folosit acelasi principiu ca cel de la functia accept, doar ca am  |
+| facut o verificare in plus: am numarat tranzitiile efectuate in "steps" si   |
+| daca steps era egal cu numarul dat fiecarui cuvant dupa virgula (kSteps),    |
+| opream executia si afisam "Fals". Desigur, masina putea sa accepte inaintea  |
+| efectuarii celor kSteps pasi iar in acest caz executia se oprea mai devreme  |
+| si se trecea la urmatorul cuvant.                                            |
+|______________________________________________________________________________|
